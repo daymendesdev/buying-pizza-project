@@ -16,8 +16,7 @@
 body {
     font-size: 15px;
     font-family: 'Lato', Helvetica, sans-serif;
-    padding: 20px;
-    background-color: #EEE;
+    background-color: var(--body-bgColor);
     min-height: 100vh;
     display: flex;
 }
@@ -28,6 +27,7 @@ body {
 
 main {
     flex: 1;
+    padding: 20px;
 }
 
 .container {
