@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@400;700&family=Lato:wght@400;700&display=swap');
 
+:root {
+    --body-bgColor: #EEE;
+    --cart-bgColor: #9ccbe6;
+    --cartButton-bgColor: #48d05f;
+    --cartButton-borderColor: #63f77c;
+}
+
 * {
     margin: 0;
     padding: 0;
