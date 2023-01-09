@@ -95,3 +95,94 @@ h1 {
     color: #555;
     margin-top: 10px;
 }
+
+
+aside {
+    width: 30vw;
+    padding: 20px;
+    background-color: var(--cart-bgColor);
+    font-family: 'Hepta Slab', Helvetica, serif;
+}
+
+.cart {
+    margin-bottom: 20px;
+}
+
+.cart--item {
+    display: flex;
+    align-items: center;
+}
+
+.pizzaIcon {
+    width: 40px;
+    height: 40px;
+}
+
+.pizzaIcon img {
+    width: 100%;
+}
+
+.cart--itemName {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.cart--itemQt {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background-color: var(--body-bgColor);
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.cart--itemQt button {
+    padding: 0 10px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.cart--itemQt--qt {
+    padding: 0 5px;
+    background-color: transparent;
+    font-size: 13px;
+}
+
+.cart--details div {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    font-weight: 900;
+    display: flex;
+    justify-content: space-between;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.cart--details span {
+    font-weight: normal;
+}
+
+.cart--details--total {
+    margin-bottom: 20px;
+}
+
+.cart--details--total,
+.cart--details--total span {
+    color: #000;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.cart--button {
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--cartButton-bgColor);
+    border: 1px solid var(--cartButton-borderColor);
+    border-radius: 20px;
+    color: #FFF;
+    font-size: 16px;
+    font-family: 'Hepta Slab', Helvetica, serif;
+    cursor: pointer;
+}
