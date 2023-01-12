@@ -21,6 +21,7 @@ body {
     background-color: var(--body-bgColor);
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
 }
 
 .models {
@@ -222,7 +223,7 @@ aside {
     right: 0;
     bottom: 0;
     left: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 255, 255, .5);
@@ -364,11 +365,33 @@ aside {
 
 
 
+@media (max-width: 1000px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 850px) {
+    main {
+        padding-top: 60px;
+    }
+
+    header {
+        display: flex;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .pizza-item {
+        max-width: 100%;
+    }
+
     .pizzaWindow {
         align-items: flex-start;
     }
-    
+
     .pizzaWindoBody {
         width: 100vw;
         padding: 20px;
