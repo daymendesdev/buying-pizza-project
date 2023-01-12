@@ -225,6 +225,10 @@ aside {
     padding-bottom: 50px;
 }
 
+.pizzaInfo h1 {
+    margin-top: 50px;
+}
+
 .PizzaInfo--desc {
     color: #999;
     font-size: 15px;
