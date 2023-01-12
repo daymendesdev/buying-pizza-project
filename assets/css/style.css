@@ -102,6 +102,7 @@ aside {
     padding: 20px;
     background-color: var(--cart-bgColor);
     font-family: 'Hepta Slab', Helvetica, serif;
+    display: none;
 }
 
 .cart {
@@ -337,13 +338,51 @@ aside {
 
 
 @media (max-width: 850px) {
+    .pizzaWindow {
+        align-items: flex-start;
+    }
+    
     .pizzaWindoBody {
-        display: block;
         width: 100vw;
+        padding: 20px;
+        display: block;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .pizzaInfo--CancelMobileButton {
+        display: block;
     }
 
     .pizzaBig img {
         width: 75%;
         height: auto;
+    }
+
+    .pizzaInfo h1 {
+        margin-top: 20px;
+    }
+
+    .pizzaInfo--qtminus,
+    .pizzaInfo--qtplus {
+        padding: 0 25px;
+        font-size: 25px;
+    }
+
+    .pizzaInfo--qt {
+        padding: 0 5px;
+        line-height: 60px;
+        font-size: 20px;
+    }
+
+    .pizzaInfo--addButton {
+        width: 100%;
+        margin: 30px 0;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .pizzaInfo--cancelButton {
+        display: none;
     }
 }
