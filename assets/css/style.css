@@ -198,6 +198,7 @@ aside {
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 255, 255, .5);
+    overflow-y: auto;
 }
 
 .pizzaWindoBody {
