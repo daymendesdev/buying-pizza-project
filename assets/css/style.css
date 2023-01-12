@@ -21,7 +21,6 @@ body {
     background-color: var(--body-bgColor);
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
 }
 
 .models {
@@ -126,11 +125,15 @@ h1 {
 
 
 aside {
-    width: 30vw;
-    padding: 20px;
+    width: 0vw;
     background-color: var(--cart-bgColor);
     font-family: 'Hepta Slab', Helvetica, serif;
-    display: none;
+    overflow-x: hidden;
+    transition: all .2s ease;
+}
+
+aside.show {
+    width: 30vw;
 }
 
 .cart {
@@ -443,5 +446,22 @@ aside {
 
     .pizzaInfo--cancelButton {
         display: none;
+    }
+
+    aside {
+        position: fixed;
+        width: 100vw;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 100vw;
+    }
+
+    aside.show {
+        width: auto;
+    }
+
+    .menu-closer {
+        display: block;
     }
 }
