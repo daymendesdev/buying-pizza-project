@@ -137,6 +137,15 @@ aside {
     margin-bottom: 20px;
 }
 
+.cart--area {
+    padding: 20px;
+}
+
+.menu-closer {
+    display: none;
+    font-size: 25px;
+}
+
 .cart--item {
     display: flex;
     align-items: center;
