@@ -249,11 +249,11 @@ aside {
 .pizzaInfo--sector {
     color: #CCC;
     margin: 30px 0 10px 0;
+    text-transform: uppercase;
 }
 
 .pizzaInfo--sizes {
     display: inline-flex;
-    background-color: #EEE;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -263,6 +263,7 @@ aside {
     cursor: pointer;
     font-weight: 700;
     font-size: 13px;
+    background-color: #EEE;
 }
 
 .pizzaInfo--size span {
@@ -273,6 +274,10 @@ aside {
 .selected, .selected span {
     background-color: #399ade;
     color: #FFF;
+}
+
+.selected span {
+    color: #CCC;
 }
 
 .pizzaInfo--price {
@@ -310,7 +315,7 @@ aside {
 }
 
 .pizzaInfo--addButton {
-    padding: 20px 25px;
+    padding: 20px 30px;
     background-color: #48d05f;
     color: #FFF;
     display: inline-block;
