@@ -2,6 +2,8 @@
 
 :root {
     --body-bgColor: #EEE;
+    --darkBlue: #388BC5;
+    --lightBlue: #a9dcff;
     --cart-bgColor: #9ccbe6;
     --cartButton-bgColor: #48d05f;
     --cartButton-borderColor: #63f77c;
@@ -93,7 +95,7 @@ h1 {
     height: 50px;
     margin-top: -25px;
     border-radius: 50%;
-    background-color: #388BC5;
+    background-color: var(--darkBlue);
     color: #FFF;
     font-size: 20px;
     display: flex;
