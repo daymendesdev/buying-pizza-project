@@ -235,6 +235,7 @@ aside {
 .PizzaInfo--desc {
     color: #999;
     font-size: 15px;
+    font-family: 'Lato', Helvetica, sans-serif;
 }
 
 .pizzaInfo--sector {
