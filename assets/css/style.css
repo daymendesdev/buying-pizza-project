@@ -25,6 +25,31 @@ body {
     display: none;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 60px;
+    background-color: var(--darkBlue);
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu-opener {
+    font-size: 26px;
+    padding: 5px 20px;
+    margin-right: 15px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: var(--lightBlue);
+}
+
+.menu-opener span {
+    margin-right: 10px;
+}
+
 main {
     flex: 1;
     padding: 20px;
