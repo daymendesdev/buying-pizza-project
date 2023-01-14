@@ -104,8 +104,13 @@ h1 {
     align-items: center;
 }
 
+.pizza-item a:hover .pizza-item--add {
+    background-color: var(--extraDarkblue);
+}
+
 .pizza-item--img img {
-    max-height: 100%;
+    width: 100%;
+    height: auto;
 }
 
 .pizza-item--price {
