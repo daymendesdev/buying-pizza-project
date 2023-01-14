@@ -7,6 +7,10 @@ function formatPrice(price) {
     return `${price.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`;
 }
 
+function closeModal() {
+    c('.pizzaWindow').style.display = 'none'; 
+}
+
 pizzaJson.map((item, index) => {
     let pizzaModels = c('.models .pizza-item').cloneNode(true);
 
@@ -22,3 +26,7 @@ pizzaJson.map((item, index) => {
 
     c('main .container').appendChild(pizzaModels);
 });
+
+cs('.pizzaInfo--cancelButton, .pizzaInfo--CancelMobileButton').forEach((item) => {
+    item.addEventListener('click', closeModal);
+})
