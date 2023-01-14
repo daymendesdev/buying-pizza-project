@@ -9,6 +9,8 @@ function formatPrice(price) {
 
 pizzaJson.map((item, index) => {
     let pizzaModels = c('.models .pizza-item').cloneNode(true);
+
+    pizzaModels.setAttribute('data-key', index);
     pizzaModels.querySelector('.pizza-item--img img').src = item.img;
     pizzaModels.querySelector('.pizza-item--price').innerHTML = formatPrice(item.price);
     pizzaModels.querySelector('.pizza-item--name').innerHTML = item.name;
