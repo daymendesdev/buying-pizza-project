@@ -246,6 +246,7 @@ aside.show {
     align-items: center;
     background-color: rgb(255, 255, 255, .5);
     overflow-y: auto;
+    transition: all .5s ease;
 }
 
 .pizzaWindoBody {
