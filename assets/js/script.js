@@ -60,3 +60,19 @@ pizzaJson.map((item, index) => {
 cs('.pizzaInfo--cancelButton, .pizzaInfo--CancelMobileButton').forEach((item) => {
     item.addEventListener('click', closeModal);
 })
+
+cs('.pizzaInfo--qtminus, .pizzaInfo--qtplus').forEach((item) => {
+    item.addEventListener('click', () => {
+        switch (item.innerHTML) {
+            case '-':
+                if (modalQt > 1) {
+                    modalQt--;
+                }
+            break;
+            case '+':
+                modalQt++;
+            break;
+        }
+        c('.pizzaInfo--qt').innerHTML = modalQt;
+    })
+});
