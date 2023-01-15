@@ -76,3 +76,10 @@ cs('.pizzaInfo--qtminus, .pizzaInfo--qtplus').forEach((item) => {
         c('.pizzaInfo--qt').innerHTML = modalQt;
     })
 });
+
+cs('.pizzaInfo--size').forEach((size, sizeIndex) => {
+    size.addEventListener('click', () => {
+        c('.pizzaInfo--size.selected').classList.remove('selected');
+        size.classList.add('selected');
+    });
+})
