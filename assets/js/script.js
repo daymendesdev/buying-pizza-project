@@ -5,8 +5,6 @@ let pizzaList = [];
 const c = (el) => document.querySelector(el);
 const cs = (el) => document.querySelectorAll(el);
 
-let pizzaItem = '';
-
 function formatPrice(price) {
     return `${price.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`;
 }
@@ -78,7 +76,6 @@ function updateCart() {
         c('aside').classList.remove('show');
         c('aside').style.left = '100vw';
     }
-    console.log('atualizou')
 }
 
 pizzaJson.map((item, index) => {
@@ -171,7 +168,6 @@ c('.pizzaInfo--addButton').addEventListener('click', (e) => {
             qt: modalQt
         });
     }
-    console.log(pizzaList);
     closeModal();
     updateCart();
 });
