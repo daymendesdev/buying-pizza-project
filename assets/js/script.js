@@ -84,6 +84,16 @@ cs('.pizzaInfo--size').forEach((size, sizeIndex) => {
     });
 });
 
+c('.menu-opener').addEventListener('click', (e) => {
+    if (pizzaList.length > 0) {
+        c('aside').style.left = '0';
+    }
+});
+
+c('.menu-closer').addEventListener('click', () => {
+    c('aside').style.left = '100vw';
+})
+
 c('.pizzaInfo--addButton').addEventListener('click', (e) => {
     let size = parseInt(c('.pizzaInfo--size.selected').getAttribute('data-key'));
     let identifier = pizzaJson[modalKey].id + '@' + size;
