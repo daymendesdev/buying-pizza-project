@@ -18,6 +18,69 @@ function closeModal() {
     }, 500);
 }
 
+function updateCart() {
+    c('.menu-opener span').innerHTML = pizzaList.length;
+
+    if (pizzaList.length > 0) {
+        c('aside').classList.add('show');
+        c('.cart').innerHTML = '';
+
+        let subtotal = 0;
+        let discount = 0;
+        let total = 0;
+
+        for (let i in pizzaList) {
+            let pizzaItem = pizzaJson.find((item) => item.id == pizzaList[i].id);
+
+            subtotal += (pizzaItem.price * pizzaList[i].qt);
+
+            let cartItem = c('.models .cart--item').cloneNode(true);
+
+            let pizzaSizeName;
+            switch(pizzaList[i].size) {
+                case 0:
+                    pizzaSizeName = 'P';
+                break;
+                case 1:
+                    pizzaSizeName = 'M';
+                break;
+                case 2:
+                    pizzaSizeName = 'G';
+                break
+            }
+            let pizzaName = `${pizzaItem.name} (${pizzaSizeName})`;
+
+            cartItem.querySelector('img').src = pizzaItem.img;
+            cartItem.querySelector('.cart--itemName').innerHTML = pizzaName;
+            cartItem.querySelector('.cart--itemQt--qt').innerHTML = pizzaList[i].qt;
+            cartItem.querySelector('.cart--itemQt--minus').addEventListener('click', () => {
+                if (pizzaList[i].qt > 1) {
+                    pizzaList[i].qt--;
+                } else {
+                    pizzaList.splice(i, 1)
+                }
+                updateCart();
+            });
+            cartItem.querySelector('.cart--itemQt--plus').addEventListener('click', () => {
+                pizzaList[i].qt++;
+                updateCart();
+            })
+
+            c('.cart').appendChild(cartItem);
+        }
+        discount = subtotal * 0.1;
+        total = subtotal - discount;
+
+        c('.cart--details--subTotal span').innerHTML = formatPrice(subtotal);
+        c('.cart--details--discount span').innerHTML = formatPrice(discount);
+        c('.cart--details--total span').innerHTML = formatPrice(total);
+    } else {
+        c('aside').classList.remove('show');
+        c('aside').style.left = '100vw';
+    }
+    console.log('atualizou')
+}
+
 pizzaJson.map((item, index) => {
     let pizzaModels = c('.models .pizza-item').cloneNode(true);
 
